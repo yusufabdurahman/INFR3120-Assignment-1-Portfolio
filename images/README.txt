@@ -1,2 +1,4 @@
-Replace profile-placeholder.svg with your own personal photo before submission.
-You may also replace video-poster.svg with a still image from your own introduction video.
+   Images used on the site.
+   - profile.jpeg: my own photo, used on the Home and About pages.
+   - video-poster.jpg: cover image for my introduction video (a frame from the video).
+   - profile-placeholder.svg and video-poster.svg: unused placeholders.
