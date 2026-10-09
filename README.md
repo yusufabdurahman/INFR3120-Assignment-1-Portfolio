@@ -1,9 +1,11 @@
 # Yusuf Abdurahman - Personal Portfolio
 
-**Course assignment:** HTML5 and CSS3 portfolio (Fall 2026, Assignment 1)
-**Student:** Yusuf Abdurahman
-**Live site:** EDIT: paste your GitHub Pages link, like https://YOUR-USERNAME.github.io/REPO-NAME/
-**Repository:** EDIT: paste your GitHub repo link
+# Yusuf Abdurahman - Personal Portfolio
+
+- **Course assignment:** HTML5 and CSS3 portfolio (Fall 2026, Assignment 1)
+- **Student:** Yusuf Abdurahman
+- **Live site:** https://yusufabdurahman.github.io/INFR3120-Assignment-1-Portfolio/
+- **Repository:** https://github.com/yusufabdurahman/INFR3120-Assignment-1-Portfolio
 
 ## About this project
 A four-page personal portfolio built with HTML5 and CSS3 and hosted on GitHub Pages. It introduces me, my studies in Information Technology at Ontario Tech University, my projects and a way to contact me. The design uses a black background, blue accents and a monospace font to suit my interest in networking and cybersecurity.
