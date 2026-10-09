@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio of Yusuf Abdurahman, Information Technology student.">
+  <title>Yusuf Abdurahman | Home</title>
+  <!-- Shared styles, then one file per screen size -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 767px)">
+  <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width: 768px) and (max-width: 1023px)">
+  <link rel="stylesheet" href="css/laptop.css" media="screen and (min-width: 1024px)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo"><a href="index.html">Yusuf Abdurahman</a></div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-photo">
+          <img src="images/profile.jpeg" alt="Portrait of Yusuf Abdurahman" width="400" height="400">
+        </div>
+      <div class="hero-text">
+          <p class="hello">Hi there, I'm</p>
+          <h1 id="hero-heading">Yusuf Abdurahman</h1>
+          <p class="role">A <span class="typed">Networking and Security Student</span></p>
+          <p>I've loved technology most of my life, and now I study Information Technology at Ontario Tech University. I'm passionate about networking, cybersecurity and building things that actually work.</p>
+          <p>I learn best by breaking a lab, then fixing it. Take a look at my projects, or get in touch.</p>
+          <ul class="social-links" aria-label="Social links">
+            <li><a href="https://www.linkedin.com/in/yusuf-abdurahman-677ab0347/" aria-label="LinkedIn" target="_blank" rel="noopener">in</a></li>
+            <li><a href="https://github.com/yusufabdurahman" aria-label="GitHub" target="_blank" rel="noopener">gh</a></li>
+          </ul>
+          <a class="btn" href="projects.html">View My Projects</a>
+          <a class="btn btn-outline" href="contact.html">Contact Me</a>
+        </div>
+  
+    </section>
+
+    <section class="section section-alt" aria-labelledby="focus-heading">
+      <div class="container clearfix">
+        <h2 class="section-title" id="focus-heading">What I Work On</h2>
+        <p class="section-intro">Three areas I keep coming back to during my studies.</p>
+        <article class="skill">
+          <h3>Networking</h3>
+          <p>Subnetting, routing and switching labs, and building small networks from scratch.</p>
+        </article>
+        <article class="skill">
+          <h3>Security</h3>
+          <p>Learning how systems get attacked so I can protect them, one lab at a time.</p>
+        </article>
+        <article class="skill">
+          <h3>Web Development</h3>
+          <p>Writing clean HTML and CSS pages that work on a phone, a tablet and a laptop.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Contact: <a href="mailto:yusuf.abdurahman@ontariotechu.net">yusuf.abdurahman@ontariotechu.net</a></p>
+      <p>&copy; 2026 Yusuf Abdurahman. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
