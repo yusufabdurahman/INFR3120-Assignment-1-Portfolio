@@ -1,7 +1,5 @@
 # Yusuf Abdurahman - Personal Portfolio
 
-# Yusuf Abdurahman - Personal Portfolio
-
 - **Course assignment:** HTML5 and CSS3 portfolio (Fall 2026, Assignment 1)
 - **Student:** Yusuf Abdurahman
 - **Live site:** https://yusufabdurahman.github.io/INFR3120-Assignment-1-Portfolio/
