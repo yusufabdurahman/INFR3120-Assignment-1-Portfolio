@@ -1,0 +1,17 @@
+.logo { text-align: center; margin-bottom: 8px; }
+.main-nav { text-align: center; }
+.main-nav a { padding: 6px 8px; font-size: 0.95rem; }
+
+.hero { padding: 30px 0; text-align: center; }
+.hero-photo { width: 65%; margin: 0 auto 26px; }
+.hero-text h1 { font-size: 2rem; }
+.hero-text .role { font-size: 1.25rem; }
+
+.skill, .project { width: 100%; margin-bottom: 18px; }
+
+.about-photo { width: 65%; margin: 0 auto 26px; }
+.about-text, .video-wrap { width: 100%; margin-bottom: 26px; }
+
+.contact-form { width: 100%; }
+.contact-form .btn { width: 100%; }
+  .main-nav a { font-size: 0.85rem; padding: 6px 6px; }

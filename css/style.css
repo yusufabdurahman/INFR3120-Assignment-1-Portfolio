@@ -1,0 +1,287 @@
+/* style.css - shared by all pages. No flexbox: layout uses floats and % widths. */
+
+/* Color scheme: black and blue */
+:root {
+  --black: #000000;       /* page background */
+  --panel: #141414;       /* cards */
+  --dark: #0d0d0d;        /* alternate sections */
+  --blue: #1e6fd9;        /* main brand color */
+  --accent: #4da3ff;      /* light blue: links, highlights */
+  --text: #f1f1f1;        /* body text */
+  --white: #ffffff;
+}
+
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  color: var(--text);
+  background: var(--black);
+  line-height: 1.6;
+}
+
+img, video { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); }
+
+/* Clearfix: lets a parent wrap around floated children */
+.clearfix::after { content: ""; display: table; clear: both; }
+
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+
+/* Header + navigation */
+.site-header {
+  /* GRADIENT 1: linear, left to right (black to blue) */
+  background: linear-gradient(to right, var(--black), var(--blue));
+  border-bottom: 2px solid var(--blue);
+  color: var(--white);
+  padding: 14px 0;
+}
+.logo { font-size: 1.5rem; font-weight: 700; }
+.logo a { color: var(--white); text-decoration: none; }
+.main-nav ul { list-style: none; }
+.main-nav li { display: inline-block; }
+.main-nav a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-bottom: 3px solid transparent;
+}
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav a[aria-current="page"] { border-bottom-color: var(--accent); }
+
+/* Hero */
+.hero {
+  /* GRADIENT 2: angled linear gradient (135deg) */
+  background: linear-gradient(135deg, #000000 55%, #0b1a33 100%);
+  padding: 50px 0;
+}
+.hero-photo img,
+.about-photo img {
+  border-radius: 50%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 10%;   /* keeps the face in the circle */
+  box-shadow: 0 0 45px 12px rgba(30, 111, 217, 0.55);  /* blue glow */
+}
+.hero-text .hello { font-size: 1.4rem; font-weight: 700; }
+.hero-text h1 { font-size: 2.4rem; color: var(--white); line-height: 1.15; font-weight: 700; }
+.hero-text .role { font-size: 1.5rem; font-weight: 700; margin: 6px 0 14px; }
+.hero-text p { margin-bottom: 16px; }
+
+.typed {
+  color: var(--accent);
+  border-right: 3px solid var(--accent);   /* blinking cursor */
+  padding-right: 4px;
+  animation: blink 0.8s steps(1) infinite;
+}
+@keyframes blink { 50% { border-right-color: transparent; } }
+
+strong { font-weight: 700; color: var(--accent); }
+
+.social-links { list-style: none; margin-bottom: 18px; }
+.social-links li { display: inline-block; margin-right: 8px; }
+.social-links a {
+  display: block;
+  width: 38px;
+  height: 38px;
+  line-height: 34px;
+  text-align: center;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.social-links a:hover,
+.social-links a:focus { background: var(--blue); color: var(--white); }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 10px 26px;
+  border-radius: 30px;
+  border: 2px solid var(--blue);
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn:hover, .btn:focus {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--black);
+}
+.btn-outline { background: transparent; color: var(--accent); border-color: var(--accent); }
+.btn-outline:hover, .btn-outline:focus { color: var(--black); }
+
+/* Sections */
+.section { padding: 50px 0; }
+.section-alt { background: var(--dark); }
+.section-title { font-size: 2rem; color: var(--white); margin-bottom: 8px; font-weight: 700; }
+.section-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 5px;
+  margin-top: 8px;
+  border-radius: 3px;
+  /* GRADIENT 3: angled bar under each heading */
+  background: linear-gradient(90deg, var(--accent), var(--blue));
+}
+.section-intro { margin: 14px 0 28px; max-width: 700px; }
+
+/* Cards */
+.skill {
+  background: var(--panel);
+  border-top: 5px solid var(--blue);
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(30, 111, 217, 0.35);
+}
+.skill h3 { color: var(--white); margin-bottom: 6px; font-weight: 700; }
+
+.project {
+  background: var(--panel);
+  border-left: 6px solid var(--blue);
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(30, 111, 217, 0.35);
+}
+.project h2 { font-size: 1.25rem; color: var(--white); margin-bottom: 8px; font-weight: 700; }
+.project .course {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+/* About page */
+.about-text h2 { color: var(--white); margin-bottom: 10px; font-weight: 700; }
+.about-text p { margin-bottom: 14px; }
+.video-wrap video { width: 100%; border-radius: 10px; background: #000; border: 4px solid var(--blue); }
+.video-wrap figcaption { margin-top: 8px; font-size: 0.9rem; }
+
+/* Contact form */
+.contact-form label { display: block; font-weight: 700; margin: 16px 0 4px; color: var(--white); }
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #111111;
+  border: 2px solid #9db4d6;
+  border-radius: 6px;
+  background: #f3f7fd;
+}
+.contact-form input:focus,
+.contact-form textarea:focus { outline: 3px solid var(--accent); border-color: var(--blue); }
+.contact-form textarea { height: 150px; resize: vertical; }
+.contact-form .btn { margin-top: 20px; }
+
+/* Footer */
+.site-footer {
+  /* GRADIENT 4: angled (160deg) */
+  background: linear-gradient(160deg, var(--black), var(--blue));
+  color: var(--white);
+  text-align: center;
+  padding: 26px 0;
+}
+.site-footer a { color: var(--white); font-weight: 700; }
+/* ==== Custom design layer: terminal / network look ==== */
+
+/* 1. Dotted grid background, like a network diagram */
+body {
+  background-image: radial-gradient(rgba(77, 163, 255, 0.22) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.hero {
+  background:
+    radial-gradient(rgba(77, 163, 255, 0.22) 1px, transparent 1px),
+    linear-gradient(135deg, #000000 55%, #0b1a33 100%);
+  background-size: 28px 28px, auto;
+}
+.section-alt {
+  background: rgba(13, 13, 13, 0.92);
+  border-top: 1px dashed var(--accent);
+  border-bottom: 1px dashed var(--accent);
+}
+
+/* 2. Terminal prompts in front of text */
+.hero-text .hello::before { content: "$ "; color: var(--accent); }
+.section-title::before { content: "> "; color: var(--accent); }
+
+/* 3. Pulsing "online" dot next to your name in the header */
+.logo a::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #3ddc84;
+  box-shadow: 0 0 8px #3ddc84;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* 4. Photo: glowing ring with a dashed orbit around it */
+.hero-photo img,
+.about-photo img {
+  border: 4px solid var(--accent);
+  outline: 2px dashed var(--blue);
+  outline-offset: 12px;
+  box-shadow: 0 0 35px 6px rgba(30, 111, 217, 0.55);
+}
+
+/* 5. Cards lift and glow when you hover */
+.skill,
+.project {
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.skill:hover,
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(77, 163, 255, 0.55);
+}
+
+/* 6. Buttons: hard offset shadow, square-ish corners */
+.btn {
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 var(--accent);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn:hover,
+.btn:focus {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--accent);
+}
+.btn-outline { box-shadow: 4px 4px 0 var(--blue); }
+
+/* 7. Terminal look on project tags and nav */
+.project .course::before { content: "[ "; }
+.project .course::after { content: " ]"; }
+.project .course { border-radius: 4px; background: transparent; border: 1px solid var(--accent); color: var(--accent); }
+
+/* 8. Highlighted text color when you select it */
+::selection { background: var(--accent); color: var(--black); }
+
+/* 9. Respect people who prefer no animation */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

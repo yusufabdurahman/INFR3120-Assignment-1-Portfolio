@@ -1,0 +1,19 @@
+.logo { float: left; margin-top: 4px; }
+.main-nav { float: right; }
+.site-header .container::after { content: ""; display: table; clear: both; }
+
+.hero-photo { float: left; width: 38%; }
+.hero-text { float: right; width: 58%; margin-top: 10px; }
+.hero .container::after { content: ""; display: table; clear: both; }
+
+/* 2 cards per row: 48% + 4% gap + 48% */
+.skill, .project { float: left; width: 48%; margin: 0 4% 22px 0; }
+.skill:nth-of-type(2n), .project:nth-of-type(2n) { margin-right: 0; }
+.skill:nth-of-type(2n + 1), .project:nth-of-type(2n + 1) { clear: left; }
+.project { min-height: 190px; }
+
+.about-photo { float: left; width: 34%; }
+.about-text { float: right; width: 60%; }
+.video-wrap { clear: both; padding-top: 30px; width: 80%; margin: 0 auto; }
+
+.contact-form { width: 80%; margin: 0 auto; }
